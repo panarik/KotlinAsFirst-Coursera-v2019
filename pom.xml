@@ -29,6 +29,7 @@
             <plugin>
                 <artifactId>kfirst-runner-plugin</artifactId>
                 <groupId>org.jetbrains.research</groupId>
+
                 <version>19.0.2</version>
                 <configuration>
                     <packages>
