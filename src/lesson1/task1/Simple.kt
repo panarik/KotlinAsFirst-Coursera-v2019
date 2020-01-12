@@ -1,8 +1,7 @@
-@file:Suppress("UNUSED_PARAMETER")
-
 package lesson1.task1
 
 import kotlin.math.*
+
 // test
 /**
  * Пример
@@ -49,8 +48,39 @@ fun quadraticRootProduct(a: Double, b: Double, c: Double): Double {
  * Пример главной функции
  */
 fun main() {
+
+    fun sqr(x: Int): Int {
+        return x * x
+    }
+
+    val result = sqr(9)
     val x1x2 = quadraticRootProduct(1.0, 13.0, 42.0)
+
     println("Root product: $x1x2")
+    println("Result 7*7 = $result")
+
+
+    //тест первой задачки
+    val deg = 36
+    val min = 14
+    val sec = 35
+    val minToDeg: Double = (min * 1.00000 / 60).toDouble()
+    val secToDeg: Double = (sec * 1.00000 / 3600).toDouble()
+
+    fun angleInRadianTask(deg: Int, min: Int, sec: Int): Double {
+
+        val resultTask = (((deg + minToDeg + secToDeg) * PI) / 180)
+        return resultTask
+    }
+
+    val resultTask1 = angleInRadianTask(deg, min, sec)
+
+    println("дано градусов = $deg")
+    println("дано минут = $minToDeg")
+    println("дано секунд = $secToDeg")
+    println("результат = $resultTask1")
+
+
 }
 
 /**
@@ -76,7 +106,14 @@ fun lengthInMeters(sagenes: Int, arshins: Int, vershoks: Int): Double = TODO()
  * Пользователь задает угол в градусах, минутах и секундах (например, 36 градусов 14 минут 35 секунд).
  * Вывести значение того же угла в радианах (например, 0.63256).
  */
-fun angleInRadian(deg: Int, min: Int, sec: Int): Double = TODO()
+fun angleInRadian(deg: Int, min: Int, sec: Int): Double {
+
+    val minToDeg: Double = (min * 1.00000 / 60)
+    val secToDeg: Double = (sec * 1.00000 / 3600)
+
+    return (((deg + minToDeg + secToDeg) * PI) / 180)
+}
+
 
 /**
  * Тривиальная
