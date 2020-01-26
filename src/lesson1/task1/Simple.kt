@@ -81,6 +81,16 @@ fun main() {
     println("результат = $resultTask1")
 
 
+    //тест второй задачки
+    var number = 3801
+
+    fun thirdDigitTest(): String {
+        var numberString = "$number"
+        return numberString
+    }
+
+    println("вывод ${thirdDigitTest()}")
+
 }
 
 /**
