@@ -68,6 +68,23 @@ fun main() {
     val minToDeg: Double = (min * 1.00000 / 60).toDouble()
     val secToDeg: Double = (sec * 1.00000 / 3600).toDouble()
 
+
+    fun accountInThreeYears(initial: Int, percent: Int): Double {
+        var years = 0
+        var deposit = initial * 1.0
+
+        while (years < 3) {
+            deposit = deposit + deposit * (percent * 0.01)
+            println("deposit:  $deposit")
+            years = years + 1
+        }
+        return deposit
+    }
+
+    val resultD: Double = accountInThreeYears(100, 10)
+    println("result deposit: $resultD")
+
+
     fun angleInRadianTask(deg: Int, min: Int, sec: Int): Double {
 
         val resultTask = (((deg + minToDeg + secToDeg) * PI) / 180)
@@ -175,7 +192,17 @@ fun travelMinutes(hoursDepart: Int, minutesDepart: Int, hoursArrive: Int, minute
  * Сколько денег будет на счету через 3 года (с учётом сложных процентов)?
  * Например, 100 рублей под 10% годовых превратятся в 133.1 рубля
  */
-fun accountInThreeYears(initial: Int, percent: Int): Double = TODO()
+fun accountInThreeYears(initial: Int, percent: Int): Double {
+    var years = 0
+    var deposit = initial * 1.0
+
+    while (years < 3) {
+        deposit = deposit + deposit * (percent * 0.01)
+        println("deposit:  $deposit")
+        years = years + 1
+    }
+    return deposit
+}
 
 /**
  * Простая
